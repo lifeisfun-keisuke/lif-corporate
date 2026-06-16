@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>株式会社LIF（リフ）｜SNS運用・WEB制作・広告運用</title>
-<meta name="description" content="株式会社LIF（リフ）は、Instagramを中心としたSNS運用とWEB制作で、見られるを来店と売上に変える会社です。">
+<meta name="description" content="株式会社LIF（リフ）は、SNS運用・WEB制作・広告運用で、見られるを来店と売上に変える会社です。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -63,7 +63,7 @@
     font-family:"Zen Kaku Gothic New",sans-serif;
     font-size:12px;font-weight:500;color:var(--muted);letter-spacing:.1em;
   }
-  .nav-links{display:flex;gap:30px;align-items:center;}
+  .nav-links{display:flex;gap:28px;align-items:center;}
   .nav-links a{
     font-size:13px;font-weight:500;color:var(--ink-soft);
     text-decoration:none;letter-spacing:.06em;transition:color .2s;
@@ -74,7 +74,7 @@
     padding:9px 20px;color:var(--ink);
   }
   .nav-links .cta:hover{background:var(--ink);color:var(--paper);}
-  @media(max-width:640px){ .nav-links a:not(.cta){display:none;} }
+  @media(max-width:680px){ .nav-links a:not(.cta){display:none;} }
 
   /* ---------- hero ---------- */
   .hero{padding:96px 0 84px;position:relative;overflow:hidden;}
@@ -109,13 +109,27 @@
   @keyframes rise{to{opacity:1;transform:none;}}
 
   /* ---------- section frame ---------- */
-  section.block{padding:72px 0;border-top:1px solid var(--hair);}
-  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:48px;flex-wrap:wrap;}
+  section.block{padding:74px 0;border-top:1px solid var(--hair);}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:46px;flex-wrap:wrap;}
   .sec-head h2{
     font-family:"Zen Kaku Gothic New",sans-serif;
     font-weight:700;font-size:clamp(24px,3.4vw,34px);letter-spacing:.02em;
   }
   .sec-head .eyebrow{transform:translateY(-2px);}
+
+  /* ---------- mission ---------- */
+  .mission .statement{
+    font-family:"Zen Kaku Gothic New",sans-serif;
+    font-weight:900;
+    font-size:clamp(28px,5vw,52px);
+    line-height:1.32;letter-spacing:.01em;
+    margin-bottom:30px;
+  }
+  .mission .statement .accent{color:var(--accent);}
+  .mission p.body{
+    font-size:clamp(14px,1.6vw,16px);
+    color:var(--ink-soft);max-width:40em;line-height:2.1;
+  }
 
   /* ---------- services ---------- */
   .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);
@@ -131,6 +145,31 @@
   }
   .svc .card p{font-size:14px;color:var(--ink-soft);line-height:1.95;}
   @media(max-width:760px){ .svc{grid-template-columns:1fr;} }
+
+  /* ---------- strengths ---------- */
+  .str{border-top:1px solid var(--ink);}
+  .str .item{
+    display:grid;grid-template-columns:200px 1fr;gap:28px;
+    padding:32px 4px;border-bottom:1px solid var(--hair);align-items:start;
+  }
+  .str .item .label{
+    font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;
+    font-size:19px;letter-spacing:.03em;position:relative;padding-left:18px;
+  }
+  .str .item .label::before{
+    content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;
+    background:var(--accent);border-radius:1px;
+  }
+  .str .item .label .en{
+    display:block;font-family:"Space Grotesk",sans-serif;font-weight:500;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);margin-top:8px;padding-left:0;
+  }
+  .str .item .desc{font-size:15px;color:var(--ink-soft);line-height:2;}
+  .str .item .desc strong{font-weight:700;color:var(--ink);}
+  @media(max-width:680px){
+    .str .item{grid-template-columns:1fr;gap:12px;padding:26px 4px;}
+  }
 
   /* ---------- company table ---------- */
   .info{border-top:1px solid var(--ink);}
@@ -186,7 +225,9 @@
   <div class="wrap nav">
     <a href="#" class="mark">LIF<span class="dot">.</span><span class="yomi">株式会社リフ</span></a>
     <nav class="nav-links">
+      <a href="#mission">ミッション</a>
       <a href="#service">事業内容</a>
+      <a href="#strength">強み</a>
       <a href="#company">会社概要</a>
       <a href="#contact" class="cta">お問い合わせ</a>
     </nav>
@@ -200,8 +241,24 @@
     <p class="eyebrow reveal">WEB ・ SNS ・ AD — Digital Marketing</p>
     <h1 class="reveal d1">フォロワーを、<br><span class="bar"></span>お客様に。</h1>
     <p class="lead reveal d2">
-      株式会社LIF（リフ）は、Instagramを中心としたSNS運用とWEB制作で、<br>
+      株式会社LIF（リフ）は、SNS運用・WEB制作・広告運用で、<br>
       「見られる」を「来店」と「売上」に変える会社です。
+    </p>
+  </div>
+</section>
+
+<!-- ===== MISSION ===== -->
+<section class="block mission" id="mission">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Mission</span>
+      <h2>ミッション</h2>
+    </div>
+    <p class="statement">「見られる」を、<br><span class="accent">「選ばれる」</span>へ。</p>
+    <p class="body">
+      WEBサイトもSNSも広告も、見られただけでは売上になりません。
+      私たちは、見た目をつくる会社ではなく、お客様との出会いから来店・売上までの「仕組み」を設計する会社です。
+      お店やブランドが、次のお客様と出会い続ける状態を。それをつくることが、株式会社LIFの仕事です。
     </p>
   </div>
 </section>
@@ -222,12 +279,36 @@
       <div class="card">
         <span class="num">SNS</span>
         <h3>SNS運用代行</h3>
-        <p>Instagramを中心に、投稿の設計からDM・LINEへの導線づくりまで。日々の運用をまるごと代行します。</p>
+        <p>Instagramを中心に、投稿の設計から日々の運用までを代行。「見られる」アカウントを、お客様とつながるアカウントへ育てます。</p>
       </div>
       <div class="card">
         <span class="num">AD</span>
         <h3>広告運用</h3>
-        <p>META広告でLPからLINE登録、来店までのファネルを設計。数値を見ながら改善を続け、費用対効果を高めます。</p>
+        <p>META広告でLPから登録、来店までのファネルを設計。数値を見ながら改善を続け、費用対効果を高めます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STRENGTH ===== -->
+<section class="block" id="strength">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why LIF</span>
+      <h2>私たちの強み</h2>
+    </div>
+    <div class="str">
+      <div class="item">
+        <div class="label">導線を設計する<span class="en">Design the flow</span></div>
+        <p class="desc">つくるのは、サイトやコンテンツそのものではなく、<strong>問い合わせや来店までの導線</strong>です。「見られる」で止めず、お客様が行動を起こすところまで設計します。</p>
+      </div>
+      <div class="item">
+        <div class="label">一社で、一気通貫<span class="en">All in one</span></div>
+        <p class="desc">認知をつくるSNS、受け皿になるWEB、広げる広告。<strong>本来バラバラになりがちな3つを一社でつなげる</strong>から、集客の流れに無駄が出ません。</p>
+      </div>
+      <div class="item">
+        <div class="label">数字で、改善し続ける<span class="en">Improve with data</span></div>
+        <p class="desc">広告もサイトも、公開して終わりにしません。<strong>数値を見て何が効いているかを確かめ</strong>、改善を重ねることで、成果を伸ばし続けます。</p>
       </div>
     </div>
   </div>
@@ -245,8 +326,8 @@
       <!-- EDIT ↓ 設立日：登記申請日が確定したら差し替え -->
       <div class="row"><dt>設立</dt><dd>2026年</dd></div>
       <div class="row"><dt>代表者</dt><dd>代表取締役　吉田 圭佑</dd></div>
-      <!-- EDIT ↓ 所在地：市区町村以下を記入（番地まで出すかは任意） -->
-      <div class="row"><dt>所在地</dt><dd>千葉県浦安市</dd></div>
+      <!-- EDIT ↓ 所在地：番地まで出す場合はここに追記 -->
+      <div class="row"><dt>所在地</dt><dd>東京都渋谷区</dd></div>
       <!-- EDIT ↓ 資本金：金額を記入 -->
       <div class="row"><dt>資本金</dt><dd>—</dd></div>
       <div class="row"><dt>事業内容</dt><dd>WEBサイトの企画・制作・運用代行／SNS運用代行・広告運用／ソフトウェアの開発　ほか</dd></div>
